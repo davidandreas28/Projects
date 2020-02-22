@@ -1,0 +1,59 @@
+	
+				TEMA 2 POO
+			VCS (Version Control System)
+
+	---------------------
+	In ce a constat tema?
+	---------------------
+  
+  Tema aceasta a avut ca principal scop intelegerea unui cod scris de alti oameni, 
+implementarea unei aditii la acesta, si nu rezolvarea de la A la Z a problemei.
+Tema a simulat un proiect de munca, unde un task mare este impartit in taskuri
+mai mici si unde programatorii sunt nevoiti sa inteleaga si sa continue munca altor
+oameni.
+------------------------------------------------------------------------------------
+  Taskul propriu-zis a fost implementarea metodelor pentru VCS (status, branch,
+commit, checkout, log, rollback) si parsarea comenzilor de VCS catre CommandFactory. 
+
+	---------------
+	Ce a fost greu?
+	---------------
+
+  Singura parte dificila legata de aceasta tema a fost intelegerea codului scris deja
+in cele aproximativ 20 de clase. Odata inteleasa aceasta parte de cod, implemetarea
+celorlalte clase si metode referitoare la VCS au venit de la sine.
+
+
+	-----------
+	Timp alocat
+	-----------
+
+  8 ore
+	
+	------------
+	Implementare
+	------------
+
+  CLASE CREATE:
+	> Branch
+	> BranchOperation
+	> CheckoutOperation
+	> Commit
+	> CommitOperation
+	> InvalidVcsOperation
+	> LogOperation
+	> RollbackOperation
+	> StagedChanges
+	> StatusOperation
+
+  Vcs ---> primeste
+	--->currentBranch | 
+				--> cele doua reprezinta HEADul
+	--->currentCommit |
+
+	--->lista de Branchuri
+
+  Branch ---> primeste
+	    ---> vector de Commituri
+
+  Parsarea si metodele operatiilor --> intuitive
