@@ -23,19 +23,9 @@ de strategia fiecarui jucator.
 in Main s-au folosit doar metode din aceasta clasa. 
 
 	FreqAssetElement si FreqTable au jucat un rol important in functiile
-pentru creare a sacului intru-cat prin ele s-au facut compararile de frecventa 
+pentru creare a sacului intru-cat prin ele s-au facut comparatiile dintre frecventa 
 si profit intre carti.
 
-	In opinia mea, cea mai dificila parte a acestei a fost acordarea punctelor
-pentru King si Queen; ideaa din spatele implementarii acestei metode (giveTheBonus())
-consider ca este una originala, insa nu foarte eficienta. Am mersla acest punct al 
-temei pe ideea 'Don't throw it away if it works'.
-
-	PS : Checker-ul local nu a mers in niciun moment pentru mine. Tot ce primeam 
-era fail pe toate testele, insa cand foloseam diff intre output-urile mele si cele
-de referinta nu era gasita nicio diferenta. De vazut pentru temele urmatoare.
-	Mai mult, testul pe coding style pica pe VMChecker pentru orice numar 
-de erori > 0, chiar daca in enuntul temei este subliniat faptul ca bonusul pe coding
-style va fi acordat pentru un numar de erori mai mic sau egal cu 30.  
+ 
 
 
