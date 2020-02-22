@@ -1,0 +1,3 @@
+/home/david/Desktop/PA-HALITE/CMakeFiles/rebuild_cache.dir
+/home/david/Desktop/PA-HALITE/CMakeFiles/MyBot.dir
+/home/david/Desktop/PA-HALITE/CMakeFiles/edit_cache.dir

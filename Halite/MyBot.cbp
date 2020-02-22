@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="MyBot"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/david/Desktop/PA-HALITE"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/david/Desktop/PA-HALITE/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/david/Desktop/PA-HALITE/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/david/Desktop/PA-HALITE/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/david/Desktop/PA-HALITE/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/david/Desktop/PA-HALITE"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/david/Desktop/PA-HALITE/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/david/Desktop/PA-HALITE/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/david/Desktop/PA-HALITE/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/david/Desktop/PA-HALITE/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="MyBot">
+				<Option output="/home/david/Desktop/PA-HALITE/MyBot" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/david/Desktop/PA-HALITE"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/david/Desktop/PA-HALITE/hlt"/>
+					<Add directory="/home/david/Desktop/PA-HALITE"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/david/Desktop/PA-HALITE/Makefile&quot;  VERBOSE=1 MyBot"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/david/Desktop/PA-HALITE/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/david/Desktop/PA-HALITE/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/david/Desktop/PA-HALITE/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="MyBot/fast">
+				<Option output="/home/david/Desktop/PA-HALITE/MyBot" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/david/Desktop/PA-HALITE"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/david/Desktop/PA-HALITE/hlt"/>
+					<Add directory="/home/david/Desktop/PA-HALITE"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/david/Desktop/PA-HALITE/Makefile&quot;  VERBOSE=1 MyBot/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/david/Desktop/PA-HALITE/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/david/Desktop/PA-HALITE/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/david/Desktop/PA-HALITE/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/david/Desktop/PA-HALITE"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/david/Desktop/PA-HALITE/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/david/Desktop/PA-HALITE/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/david/Desktop/PA-HALITE/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/david/Desktop/PA-HALITE/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/david/Desktop/PA-HALITE/MyBot.cpp">
+			<Option target="MyBot"/>
+		</Unit>
+		<Unit filename="/home/david/Desktop/PA-HALITE/hlt/command.cpp">
+			<Option target="MyBot"/>
+		</Unit>
+		<Unit filename="/home/david/Desktop/PA-HALITE/hlt/command.hpp">
+			<Option target="MyBot"/>
+		</Unit>
+		<Unit filename="/home/david/Desktop/PA-HALITE/hlt/constants.cpp">
+			<Option target="MyBot"/>
+		</Unit>
+		<Unit filename="/home/david/Desktop/PA-HALITE/hlt/constants.hpp">
+			<Option target="MyBot"/>
+		</Unit>
+		<Unit filename="/home/david/Desktop/PA-HALITE/hlt/direction.hpp">
+			<Option target="MyBot"/>
+		</Unit>
+		<Unit filename="/home/david/Desktop/PA-HALITE/hlt/dropoff.cpp">
+			<Option target="MyBot"/>
+		</Unit>
+		<Unit filename="/home/david/Desktop/PA-HALITE/hlt/dropoff.hpp">
+			<Option target="MyBot"/>
+		</Unit>
+		<Unit filename="/home/david/Desktop/PA-HALITE/hlt/entity.hpp">
+			<Option target="MyBot"/>
+		</Unit>
+		<Unit filename="/home/david/Desktop/PA-HALITE/hlt/game.cpp">
+			<Option target="MyBot"/>
+		</Unit>
+		<Unit filename="/home/david/Desktop/PA-HALITE/hlt/game.hpp">
+			<Option target="MyBot"/>
+		</Unit>
+		<Unit filename="/home/david/Desktop/PA-HALITE/hlt/game_map.cpp">
+			<Option target="MyBot"/>
+		</Unit>
+		<Unit filename="/home/david/Desktop/PA-HALITE/hlt/game_map.hpp">
+			<Option target="MyBot"/>
+		</Unit>
+		<Unit filename="/home/david/Desktop/PA-HALITE/hlt/input.hpp">
+			<Option target="MyBot"/>
+		</Unit>
+		<Unit filename="/home/david/Desktop/PA-HALITE/hlt/log.cpp">
+			<Option target="MyBot"/>
+		</Unit>
+		<Unit filename="/home/david/Desktop/PA-HALITE/hlt/log.hpp">
+			<Option target="MyBot"/>
+		</Unit>
+		<Unit filename="/home/david/Desktop/PA-HALITE/hlt/map_cell.hpp">
+			<Option target="MyBot"/>
+		</Unit>
+		<Unit filename="/home/david/Desktop/PA-HALITE/hlt/player.cpp">
+			<Option target="MyBot"/>
+		</Unit>
+		<Unit filename="/home/david/Desktop/PA-HALITE/hlt/player.hpp">
+			<Option target="MyBot"/>
+		</Unit>
+		<Unit filename="/home/david/Desktop/PA-HALITE/hlt/position.hpp">
+			<Option target="MyBot"/>
+		</Unit>
+		<Unit filename="/home/david/Desktop/PA-HALITE/hlt/ship.cpp">
+			<Option target="MyBot"/>
+		</Unit>
+		<Unit filename="/home/david/Desktop/PA-HALITE/hlt/ship.hpp">
+			<Option target="MyBot"/>
+		</Unit>
+		<Unit filename="/home/david/Desktop/PA-HALITE/hlt/shipyard.hpp">
+			<Option target="MyBot"/>
+		</Unit>
+		<Unit filename="/home/david/Desktop/PA-HALITE/hlt/types.hpp">
+			<Option target="MyBot"/>
+		</Unit>
+		<Unit filename="/home/david/Desktop/PA-HALITE/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
