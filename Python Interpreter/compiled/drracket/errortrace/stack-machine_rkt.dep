@@ -1,0 +1,1 @@
+("7.2" racket ("7d042c030aa2dbea2e9824158c932b575fa26819" . "aef43f8664d416775131781a6fa846ca44dc53b8") #"/home/david/Desktop/ACS_UPB_AN2_2018-2019/SEMESTRUL_2/PP/TEMA_1/opcodes.rkt" (collects #"errortrace" #"errortrace-key.rkt") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt"))
