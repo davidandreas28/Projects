@@ -1,0 +1,51 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>TEMA 3 SD ACS<<<<<<<<<<<<<<<<<<<<<<<<<
+
+	Echipa:	
+	Cernea David Andreas - 314 CA
+	Serban Petre Bogdan - 314 CA
+
+	Functii implementate: 
+		1) same_class
+		2) get_random_samples
+		3) random_dimensions
+		4) compute_unique
+		5) get_split_as_indexes
+
+	1) same_class
+	Functia a fost implementata de Serban Petre Bogdan. Se verifica daca
+	toate clasele sunt identice. Variabila aux retine valoarea primei clase.
+	Apoi, in for se compara cu restul claselor. Daca egalitatea nu se verifica
+	functia intoarce false, altfel, true.
+
+	2) get_random_samples
+	Functia a fost implementata de Cernea David Andreas. Se initializeaza cu 0 un vector
+	alocat dinamic de size() elemente. Vectorul are rolul de a atribui 1 valorilor
+	random create anterior pasului curent. Astfel, daca functia rand() intoarce o 
+	valoare ce se regaseste in vector si este nefolosita ( = 0), atunci acea valoare este 
+	utilizata mai departe (push_back in vectorul ret, care este returnat la final
+	de functie). In schimb, daca valoarea random se regaseste in vector si este
+	folosita ( = 1), atunci se cauta o alta valoare printr-o bucla while. Functia rand 
+	este folosita pentru a genera numere random intre 0 si numarul de linii al matricei
+	samples, in acest caz.
+	
+	3) random_dimensions
+	Functia a fost implementata de Cernea David Andreas. Se initializeaza cu 0 un vector
+	alocat dinamic de size elemente ( aux_vec ). Vectorul are rolul de a atribui 1 valorilor
+	random create la pasul anterior. Astfel, daca functia rand() intoarce o valoare ce
+	se regaseste vector si este nefolosita (aux_vec[] = 0), atunci acea valoare este 
+	utilizata mai departe. In schimb, daca valoarea random se regaseste in vector si 
+	este folosita ( aux_vec[] = 1 ) se cauta alta valoare. In acesta situatie, functia
+	rand este utilizata pentru a genera numere random intre 1 si (size - 1).
+
+	4) compute_unique
+	Functia a fost implementata de Serban Petre Bogdan. Prin intermediul a doua bucle for,
+	se verifica fiecare valoare de pe coloana col cu toate celelalte valori din vectorul
+	uniqueValues introduse la pasii precedenti. Daca aceasta valoare nu se regaseste in 
+	vector, este adaugata.
+
+	5) get_split_as_indexes
+	Functia a fost implementata de Serban Petre Bogdan. Compara elementele de pe coloana 		split_index din matricea samples cu valoarea split_value. Daca elementul este mai mare
+	atunci este adaugat in vectorul right, daca este mai mic sau egal este adaugat in 
+	vectorul left.
+
+	Toate functiile au fost gandite, in prealabil, de ambii membrii ai echipei. 
