@@ -1,0 +1,41 @@
+
+			POO - TEMA 1
+		    Sheriff of Nottingham
+		Cernea David Andreas -- 325CA
+
+	Tema a avut ca scop dezvoltarea cunostintelor de baza legate
+de programarea orientata pe obiecte prin implementarea unui boardgame.
+Prin rezolvarea acestei teme am consolidat abilitati printre care se numara
+mostenirea si agregarea, folosirea constructorilor cu diferiti parametrii,
+supraincarcarea si suprascrierea. 
+
+	Rezolvarea temei a constant in partitionarea tuturor variabilelor
+in 11 clase de baza + una in care sunt retinute constantele si doua folosite
+la comparari. Cartile au fost reprezentate prin clasa Asset cu toate campurile
+necesare. Aceasta agrega la clasa Assets care cuprinde un o liste cu elementul 
+de tipul Asset. Astfel, se creeaza pachetul de carti. Un rationament asemanator
+a fost folosit pentru jucatori (Player - tipurile de jucatori). In acest exemplu insa, 
+s-a folosit o clasa abstracta (Player), care a fost extinsa de clasele Basic,
+Greedy si Bribed, fiecare implementand diferit metodele din clasa de baza in functie
+de strategia fiecarui jucator. 
+
+	Etapele jocului efectiv au fost implementate in clasa LetTheGameBegin;
+in Main s-au folosit doar metode din aceasta clasa. 
+
+	FreqAssetElement si FreqTable au jucat un rol important in functiile
+pentru creare a sacului intru-cat prin ele s-au facut compararile de frecventa 
+si profit intre carti.
+
+	In opinia mea, cea mai dificila parte a acestei a fost acordarea punctelor
+pentru King si Queen; ideaa din spatele implementarii acestei metode (giveTheBonus())
+consider ca este una originala, insa nu foarte eficienta. Am mersla acest punct al 
+temei pe ideea 'Don't throw it away if it works'.
+
+	PS : Checker-ul local nu a mers in niciun moment pentru mine. Tot ce primeam 
+era fail pe toate testele, insa cand foloseam diff intre output-urile mele si cele
+de referinta nu era gasita nicio diferenta. De vazut pentru temele urmatoare.
+	Mai mult, testul pe coding style pica pe VMChecker pentru orice numar 
+de erori > 0, chiar daca in enuntul temei este subliniat faptul ca bonusul pe coding
+style va fi acordat pentru un numar de erori mai mic sau egal cu 30.  
+
+

@@ -1,0 +1,47 @@
+package main;
+
+interface Constants {
+  int MAX_ALLOWED_SACK = 4;
+  int ARRAY_LENGTH = 6;
+  int SACK_LENGTH = 5;
+  String APPLE_NAME = "Apple";
+  String LEGAL = "Legal";
+  String ILLEGAL = "Illegal";
+  int APPLE_PROFIT = 2;
+  int APPLE_PENALTY = 2;
+  int APPLE_BONUS = 0;
+  String CHEESE_NAME = "Cheese";
+  int CHEESE_PROFIT = 3;
+  int CHEESE_PENALTY = 2;
+  int CHEESE_BONUS = 0;
+  String BREAD_NAME = "Bread";
+  int BREAD_PROFIT = 4;
+  int BREAD_PENALTY = 2;
+  int BREAD_BONUS = 0;
+  String CHICKEN_NAME = "Chicken";
+  int CHICKEN_PROFIT = 4;
+  int CHICKEN_PENALTY = 2;
+  int CHICKEN_BONUS = 0;
+  String SILK_NAME = "Silk";
+  int SILK_PROFIT = 9;
+  int SILK_PENALTY = 4;
+  int SILK_BONUS = 9;
+  String PEPPER_NAME = "Pepper";
+  int PEPPER_PROFIT = 8;
+  int PEPPER_PENALTY = 4;
+  int PEPPER_BONUS = 8;
+  String BARREL_NAME = "Barrel";
+  int BARREL_PROFIT = 7;
+  int BARREL_PENALTY = 4;
+  int BARREL_BONUS = 8;
+  int PRICE1 = 10;
+  int PRICE2 = 5;
+  int PRICE3 = 15;
+  int PRICE4 = 20;
+  int CONSTANT_3 = 3;
+  int CONSTANT_2 = 2;
+  int CONSTANT_1 = 1;
+  int COINS = 50;
+  int CONSTANT_10 = 10;
+  int CONSTANT_11 = 11;
+}
