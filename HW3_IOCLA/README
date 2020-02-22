@@ -1,0 +1,126 @@
+	Cernea David Andreas
+	    325CA
+
+Analiza executabil
+
+S-a folosit IDA Free 64
+
+*mystery1	- gaseste lugimea sirului pasat ca argument
+@argument1 - un string a carui lungime trebuie calculata
+
+String-ul va trebui sa contina caractere ASCII intru-cat singura conditie de oprire este
+test ebx, ebx, cu alte cuvinte se verifica daca ebx este ox00. Pur si simplu se pune caracter
+cu caracter din argument , iar daca nu s-a ajuns la 0x00 se incrementeaza registrii in care 
+se afla contorul si adresa de inceput a stringului. Inn cazul in care s-a ajuns la 0x00
+se iese din functie, rezultatul, lungimea sirului fiind retinut in eax;
+
+FUNCTION : int getStringLength(char* string);
+
+*mystery2	- intoarce prima pozitie a unui caracter intr-un string
+
+@argument1 - un string
+@argument2 - un char
+
+La inceput, se calculeaza lungimea string-ului folosind mystery1. Se compara fiecare caracter
+din string cu cel din argument2. Daca sunt identice, atunci se verifica daca numarul caracterelor este
+diferit de 0. Daca este, se intoarce pozitia pe care a fost gasit caracterul. Daca nu, se intoarce 
+valoarea 0xFFFFFFFF
+
+FUNCTION : int getCharPos(char* string, char character);
+
+*mystery3 	- verfica daca primele n caractere dintr-un string se gasesc la inceputul altui string 
+
+@argument 1 - string-ul in care cautam
+@argument 2 - String-ul cu care comparam (de referinta)
+@argument 3 - numarul de iteratii 
+
+Se pun parametrii pe registre, se iau primele caractere din fiecare string si se compara. Daca nu sunt 
+egale, se intoarce 1 si se iese din fucntie. Daca sunt egale insa, se continua compararea caracterelor, 
+incrementand ambii contori de siruri printr-un loop (cat timp ecx != 0). Daca primele 'numarul de iteratii'
+(retinut in ecx) caractere din stringul de referinta sunt identice cu primele din stringul in care cautam, atunci
+intoarcem 0 si se iese din functie; 
+
+FUNCTION : int function(char* string1, char* string2, int howMany);
+
+*mystery4	- copiaza offset caractere din argument 2 in argument 1
+
+@argument 1 - string in care mut;
+@argument 2 - string din care mut;
+@argument 3 - offset;
+
+Aceasta functie copiaza caracterele din argument2 in argument1 byte cu
+byte in numar de argument3. Aceasta functie se foloseste in parse_args din program si se foloseste pentru a parsa
+argumentele atunci cand se intalneste '-f';
+
+FUNCTION : void copyString(char* stringDest, char* stringSource);
+
+*mystery5 	- verifica daca char este cifra, adica daca apartine [0x30, 0x39]
+@argument 1 - un registru in care este retinut un caracter
+
+Aceasta functie verifica daca valoarea din registru este mai mare decat ox30 si mai mic decat ox39, cu alte cuvinte
+verifica daca caracterul din registru este cifra. In cazul in care conditiile sunt satisfacute se intoarce 1, iar daca
+nu, se intoarce 0;
+
+FUNCTION : int isNumber(char character);
+
+*mystery6 	- inverseaza folosind stiva caracterele unui string primit ca parametru, si apoi il parseaza catre edi,
+folosind functia mystery4 
+
+@argument 1 - sir de caractere
+
+Aceasta functie face urmatoarele lucruri : 
+	- calculeaza lungimea sirului folosing functia mystery1
+	- fa loc pe stiva pentru sir(esp - eax, unde eax contine
+	  lungimea sirului returnata prin mystery1)
+	- inverseaza sirul
+	- foloseste mystery 4 pentru a-l pasa in edi
+	- valoare de return se afla in edi
+
+FUNCTION : char* reverseString(char* string);
+
+*mystery7	- primeste un sir si il transforma in numar daca caracterele sunt cifre
+
+@argumet1 - string
+
+Functia primeste un string ca parametru. Ii calculeaza folosind functia mystery1 numarul de caractere, apoi il inverseaza
+folosind mystery6 pentru a fi mai usor atunci cand se construieste efectiv numarul. Se parcurge stringul inversat cu un 
+loop , si se verifica daca actualul caracter este o cifra prin functia mystery5. Daca ce intoarce mystery5 este 0, atunci se
+iese din functie intru-cat caracterul nu este cifra si se intoarce valoare 0xFFFFFFFF. In cazul in care mystery5 intoarce 1, 
+atunci se trece la construirea numarului. In final se intoarce numarul, continut in registrul eax;
+
+FUNCTION : int retInt(char* str);
+
+*mystery8	- verifica daca un string de referinta se regaseste in alt string, cunoscund lungimea stringului de referinta
+
+@argument1 - string in care cautam
+@argument2 - string de referinta
+@argument3 - lungimea stringului de referinta
+
+Functia incepe prin a compara lungimea argumentelor cu 0 (mystery 8_11). In cazul in care lungimea este mai mica decat 0, se iese din
+functie si se returneaza 0.Altfel, se trece mai departe si se verifica daca daracterul actual este egal cu newline.Daca da, se iese din functie si
+functie si se returneaza 0. Altfel, se trece mai departe si se verifica daca caracterul actual este terminator de sir (0). Daca da, 
+se iese din functie si se returneaza 0. Altfel, se trece mai departe si se compara cu primul caracter din stringul de referinta. Daca sunt egale, 
+se incrementeaza o variabila locala setata initial  cu 0. Aceasta numara cate caractere sunt identice. Altfel, contorul se seteaza iar la 0 si
+se trece mai departe. Acum, se compara contorul cu lungimea stringului de referinta. Daca sunt egale inseamna ca stringul de referinta se regaseste
+in cel in care cautam si se iese din functie cu succes (se returneaza 1). Altfel, se continua verificarea cu urmatorul caracter din stringul
+in care cautam, intorcandu-ne la mystery 8_11.	
+
+FUNCTION : int checkIfInString(char* str1, char* str2, int str2_length)
+
+*mystery9	- verifica daca un substring se gaseste pe vreun rand dintr-un string (stringul contine newlineuri), intre doua pozitii date ca
+		parametru
+
+@argument1 - string in care cautam
+@argument2 - pozitie de inceput
+@argument3 - pozitie de sfarsit
+@argument4 - stringul pe care il cautam
+
+Se verifica daca pozitia actuala (initializata cu cea de inceput) este mai mica decat cea de sfarsit. Daca este mai mare, se iese din program.
+Daca este mai mica, se continua prin a verifica daca pe pozitia actuala se afla newline. Daca da, se incrementeaza pozitia actuala si se repta procesul.
+Daca nu, se cauta pozitia lui newline. Cand s-a gasit pozitia pe care	 se face newline, se cauta in stringul de la pozitia de inceput pana la cea cu
+newlineul stringul(argument 4) pe care il cautam folosind mystery8. Daca s-a gasit se afiseaza tot randul (de la pozitia initiala la cea pe care se afla newline)
+. In continuare se actualizea pozitia initiala cu ( pozitia actuala + 1 ), se incrementeaza pozitia actuala si se repeta rationamentul pana cand pozitia de
+inceput > pozitia finala.
+
+FUNCTION : void printOccurences(char* str1, int poz_initiala, int poz_finala, char* str2)
+
